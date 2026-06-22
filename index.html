@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuatro Patitas | Peluquería y Tienda de Mascotas en Castro Urdiales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- NAV / MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="logo">🐾 Cuatro Patitas</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#tienda">Tienda</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. INICIO (HERO) -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Cuatro Patitas</h1>
+            <p class="subtitle">Peluquería de Mascotas y Tienda Canina</p>
+            <div class="rating">⭐ 4.9 <span>(51 reseñas en Google)</span></div>
+            <a href="#reservas" class="btn-main">Pedir Cita</a>
+        </div>
+    </header>
+
+    <!-- 2. SERVICIOS Y TARIFAS -->
+    <section id="servicios" class="services-section">
+        <h2>Nuestros Servicios de Estilismo</h2>
+        <p class="section-desc">Especialistas en el cuidado, higiene y bienestar de tu mascota en Castro Urdiales.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">✂️</div>
+                <h3>Corte de Uñas Básico</h3>
+                <p class="price">Desde 5 €</p>
+                <p>Corte rápido y seguro adaptado al tamaño y tipo de uña de tu peludo.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🐾</div>
+                <h3>Arreglo de Plantares</h3>
+                <p class="price">10 € - 15 €</p>
+                <p>Vaciado del pelo entre almohadillas, perfilado del contorno de las patitas y corte de uñas.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧼</div>
+                <h3>Pack Higiénico Express</h3>
+                <p class="price">15 € - 20 €</p>
+                <p>Incluye corte de uñas, limpieza profunda de oídos y arreglo completo de plantares.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🐩</div>
+                <h3>Servicio Completo</h3>
+                <p class="price">Desde 25 €</p>
+                <p>Baño higiénico, secado, cepillado y corte de pelo adaptado a la raza y tamaño.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LA TIENDA -->
+    <section id="tienda" class="store-section">
+        <h2>Todo para tu Mascota</h2>
+        <p class="section-desc">En nuestro local disponemos de productos de alta calidad seleccionados para su día a día.</p>
+        
+        <div class="store-grid">
+            <div class="store-item">🍖 <span>Alimentación Premium</span></div>
+            <div class="store-item">🧴 <span>Higiene y Cosmética</span></div>
+            <div class="store-item">🛏️ <span>Descanso y Camas</span></div>
+            <div class="store-item">🦮 <span>Accesorios de Paseo</span></div>
+            <div class="store-item">🧸 <span>Juguetes Disponibles</span></div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN DE RESERVAS (Aquí es donde enseñas los dos sistemas) -->
+    <section id="reservas" class="booking-section">
+        <h2>Reserva tu Cita</h2>
+        <p class="section-desc">Elige el método que prefieras para programar la próxima sesión de peluquería.</p>
+
+        <div class="booking-container">
+            
+            <!-- BOTÓN SUPERIOR: SISTEMA ESTÁNDAR (300€) -->
+            <div class="booking-option-card">
+                <h3>Reserva Directa por Mensaje</h3>
+                <p>Contacta directamente con nosotras para acordar el día y la hora de forma manual.</p>
+                <a href="https://wa.me/34661103145?text=Hola%20Cuatro%20Patitas,%20quiero%20pedir%20cita%20para%20un%20servicio%20de%20peluquería." target="_blank" class="btn-whatsapp">
+                    Enviar WhatsApp Directo
+                </a>
+            </div>
+
+            <!-- BOTÓN ABAJO / FORMULARIO: SISTEMA PREMIUM (650€) -->
+            <div class="booking-option-card premium-card">
+                <h3>Agenda Online Automatizada</h3>
+                <p>Selecciona el servicio y la hora que mejor te vengan. La cita se registrará automáticamente.</p>
+                
+                <form id="appointment-form" class="booking-form">
+                    <div class="form-group">
+                        <label>Servicio:</label>
+                        <select id="select-service" required>
+                            <option value="Pack Higiénico Express">Pack Higiénico Express (15€)</option>
+                            <option value="Corte de Uñas Básico">Corte de Uñas Básico (5€)</option>
+                            <option value="Arreglo de Plantares">Arreglo de Plantares (10€)</option>
+                            <option value="Servicio Completo">Servicio Completo (Desde 25€)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Fecha:</label>
+                            <input type="date" id="select-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Hora:</label>
+                            <select id="select-time" required>
+                                <option value="10:00">10:00 h</option>
+                                <option value="11:30">11:30 h</option>
+                                <option value="17:00">17:00 h</option>
+                                <option value="18:30">18:30 h</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmar y Programar Cita</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. CONTACTO Y UBICACIÓN -->
+    <footer id="contacto" class="footer-section">
+        <div class="footer-content">
+            <div class="info-box">
+                <h3>📍 Cuatro Patitas</h3>
+                <p>Calle San Francisco, nº 6, local bajo</p>
+                <p>39700 Castro-Urdiales, Cantabria</p>
+                <p>📞 Teléfono: 661 10 31 45</p>
+            </div>
+            <div class="hours-box">
+                <h3>⏰ Horario</h3>
+                <p>Lunes a Viernes: 10:00 a 20:00 h</p>
+                <p>Sábados y Domingos: Cerrado</p>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Cuatro Patitas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
